@@ -1,10 +1,21 @@
-let username = "ilias";
-console.log(username);
+let myName: string = "Dave";
+let meaningOfLife: number;
+let isLoading: boolean;
+let album: any;
 
-let a: number = 12;
-let b: string = "6";
-let c: number = 2;
+myName = "ilias";
+meaningOfLife = 42;
+isLoading = false;
+album = "van hallen";
+album = 42;
 
-console.log(a / b);
+const sum = (a: number, b: string) => {
+  return a + b;
+};
 
-console.log(c * b);
+console.log(sum(5, "6"));
+
+let postId: string | number; // union type
+let isActive: number | boolean;
+
+let re: RegExp = /\w+/g;
