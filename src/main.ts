@@ -164,3 +164,39 @@ const ilias: IPerson = {
 };
 
 console.log(ilias);
+
+type IterateeFunction = (
+  value: string,
+  index: number,
+  array: string[]
+) => string;
+
+function stringMap(array: string[], iteratee: IterateeFunction) {
+  const result = [];
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    result.push(iteratee(element, index, array));
+  }
+  return result;
+}
+
+console.log(
+  stringMap(["a", "b", "c"], (str) => {
+    return str.toUpperCase();
+  })
+);
+
+c type Person = {
+  name: string;
+};
+
+type Profession = {
+  job: string;
+};
+
+type personWhoWorks = Person & Profession;
+
+const person: personWhoWorks = {
+  name: "ilias",
+  job: "Software Engineer",
+};

@@ -30,3 +30,19 @@ const ilias = {
     dominantHand: "right",
 };
 console.log(ilias);
+function stringMap(array, iteratee) {
+    const result = [];
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        result.push(iteratee(element, index, array));
+    }
+    return result;
+}
+console.log(stringMap(["a", "b", "c"], (str) => {
+    return str.toUpperCase();
+}));
+c;
+const person = {
+    name: "ilias",
+    job: "Software Engineer",
+};
