@@ -8,11 +8,25 @@ let userName;
 userName = "John";
 // functions
 const add = (a, b) => {
-  return a + b;
+    return a + b;
 };
 const logMsg = (message) => {
-  //Void because it doesnt return anyhting
-  console.log(message);
+    //Void because it doesnt return anyhting
+    console.log(message);
 };
 logMsg(add(3, 4));
 console.log("hello there");
+function sayHello(name, yell = false) {
+    if (yell)
+        name = name.toUpperCase();
+    console.log(`Hello ${name}`);
+}
+sayHello("ilias");
+sayHello("yarnex", true);
+const ilias = {
+    name: "ilias",
+    age: 39,
+    job: "Software engineer",
+    dominantHand: "right",
+};
+console.log(ilias);

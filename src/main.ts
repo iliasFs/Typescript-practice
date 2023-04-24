@@ -138,3 +138,29 @@ const logMsg = (message: any): void => {
 logMsg(add(3, 4));
 
 console.log("hello there");
+
+function sayHello(name: string, yell: boolean = false) {
+  if (yell) name = name.toUpperCase();
+  console.log(`Hello ${name}`);
+}
+
+sayHello("ilias");
+sayHello("yarnex", true);
+
+type DominandHand = "right" | "left" | "both";
+
+interface IPerson {
+  name: string;
+  age: number;
+  job: string;
+  dominantHand: DominandHand;
+}
+
+const ilias: IPerson = {
+  name: "ilias",
+  age: 39,
+  job: "Software engineer",
+  dominantHand: "right",
+};
+
+console.log(ilias);
